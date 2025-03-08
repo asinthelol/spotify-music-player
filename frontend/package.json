@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "install": "concurrently \"npm install\" \"cd ../backend && pip install -r requirements.txt\"",
+    "install:backend": "cd ../backend && pip install -r requirements.txt && cd ../frontend",
     "start": "concurrently \"npm run dev\" \"npm run start:backend\"",
     "start:backend": "cd ../backend && python main.py"
   },

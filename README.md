@@ -29,7 +29,8 @@ cd spotify-music-player/frontend
 2. Install the dependencies
 
 ```bash
-npm run install
+npm install
+npm run install:backend
 ```
 
 3. Run the app
