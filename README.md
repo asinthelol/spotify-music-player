@@ -2,8 +2,9 @@
 
 ## Before Initializing
 
-You will need to register your app and get your own credentials from
+You will need to register your app (Web Playback SDK) and get your own credentials from
 [Spotify for Developers Dashboard](https://developer.spotify.com/dashboard/)
+
 
 Create your application and register the following Redirect URI in settings:
 
