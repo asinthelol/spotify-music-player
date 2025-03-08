@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import WebPlayback from './components/WebPlayback/WebPlayback';
 import Login from './components/Login/Login';
-
+import './styles/global.scss';
 
 export default function App() {
   const [token, setToken] = useState('');

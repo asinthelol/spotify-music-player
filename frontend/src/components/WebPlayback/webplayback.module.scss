@@ -1,0 +1,115 @@
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/variables.scss' as *;
+
+#container {
+  @include flex(center, center, column);
+
+  margin: 2rem;
+
+  width: 18rem;
+  height: 28rem;
+
+  background-color: #111;
+
+  -webkit-box-shadow: 0 0 2rem 0.5rem rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 2rem 0.5rem rgba(0,0,0,0.5);
+  box-shadow: 0 0 2rem 0.5rem rgba(0,0,0,0.5);
+
+  #album-cover-wrapper {
+    @include flex(center, center, column);
+
+    position: relative;
+
+    width: 100%;
+    height: 18rem;
+
+    #overlay {
+      content: '';
+      position: absolute;
+
+      width: 100%;
+      height: 50%;
+
+      bottom: -1px;
+
+      background: linear-gradient(to bottom, transparent, #111);
+    }
+
+    #album-cover {
+      @include flex;
+
+      width: 100%;
+      height: 100%;
+
+      background-position: center;
+      background-size: cover;
+
+      transition: background-image 1s ease-in-out;
+    }
+
+    h3, p {
+      position: absolute;
+      mix-blend-mode: luminosity;
+    }
+
+    p {
+      bottom: 4.5rem;
+
+      font-size: 0.75rem;
+    }
+
+    h3 {
+      bottom: 2.5rem;
+
+      font-size: 1.5rem;
+    }
+  }
+
+  #playback-wrapper {
+    @include flex;
+    column-gap: 2rem;
+
+    width: 100%;
+    height: 10rem;
+
+    background-color: #111;
+
+    button {
+      color: $text-color;
+      font-size: 2rem;
+
+      background-color: #111;
+
+      &:first-of-type, &:last-of-type {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $mobile-breakpoint) {
+  #container {
+    width: 27rem;
+    height: 42rem;
+
+    #album-cover-wrapper {
+      height: 27rem;
+
+      p {
+        bottom: 7rem;
+
+        font-size: 1rem;
+      }
+      h3 {
+        bottom: 4rem;
+
+        font-size: 2.25rem;
+      }
+    }
+
+    #playback-wrapper {
+      height: 15rem;
+    }
+  }
+  
+}
