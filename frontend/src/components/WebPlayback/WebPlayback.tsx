@@ -50,7 +50,7 @@ export default function WebPlayback({ token }: WebPlaybackProps) {
                     style={{ backgroundImage: `url(${albumCover})` }}
                     data-name="album-cover"
                 >
-                    {!currentTrack && <p>Switch device player!</p>}
+                    {!currentTrack && <p>Switch device player in the Spotify App!</p>}
                 </div>
                 <p>{truncateText(artists, 12)}</p>
                 <h3>{truncateText(trackName, 12)}</h3>
